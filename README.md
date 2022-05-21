@@ -1,3 +1,4 @@
+```shell
 docker run -d \
     --cap-add NET_ADMIN \
     --name wgcf \
@@ -7,3 +8,4 @@ docker run -d \
     --publish 127.0.0.1:10808:10808 \
     --volume /etc/wireguard:/etc/wireguard \
     wgcf:latest
+```
