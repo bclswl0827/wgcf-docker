@@ -1,4 +1,6 @@
 .PHONY: build
+OS_ARCH = $(shell uname -m)
 
 build:
-	docker build -t wgcf:latest --build-arg ARCH=$(uname -m) .
+	echo $(OS_ARCH)
+	docker build -t wgcf:latest --build-arg ARCH=$(OS_ARCH) .
