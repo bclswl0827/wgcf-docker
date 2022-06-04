@@ -8,4 +8,4 @@ mkdir -p /etc/wireguard
 # Force change DNS
 echo "nameserver 8.8.8.8" | tee /etc/resolv.conf
 # Start proxy server
-/usr/local/bin/gost -L=:10808
+/usr/local/bin/socks5
