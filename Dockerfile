@@ -7,7 +7,7 @@ ADD bin/${ARCH} /usr/local/bin
 ADD entrypoint.sh /entrypoint.sh
 
 RUN echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-selections \
-    && apt-get update; apt-get install -y wireguard iproute2 resolvconf psmisc cron \
+    && apt-get update; apt-get install -y wireguard iproute2 resolvconf psmisc curl \
     && chmod 755 -R /entrypoint.sh /usr/local/bin \
     && rm -rf /var/lib/apt/lists/*
 
