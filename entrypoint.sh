@@ -6,7 +6,7 @@
 mkdir -p /etc/wireguard
 /usr/bin/wg-quick up wgcf
 # Force change DNS
-echo "nameserver 8.8.8.8" | tee /etc/resolv.conf
+echo "nameserver 1.1.1.1" | tee /etc/resolv.conf
 # Keep VPN connection
 while(true); do
     sleep 30
